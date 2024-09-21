@@ -1,0 +1,34 @@
+body {
+    background-color: #0a0a23;
+    color: #dfdfe2;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  #change-due {
+    font-size: 1.2rem;
+  }
+  
+  .input-div {
+    margin-top: 20px;
+  }
+  
+  button {
+    background-color: #feac32;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  .container {
+    margin-top: 20px;
+  }
+  
+  #cash-drawer-display {
+    background-color: #fff;
+    color: black;
+    padding: 10px;
+  }
+  
