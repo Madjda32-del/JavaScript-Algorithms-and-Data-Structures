@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telephone Number Validator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #2c2c54;
+      color: white;
+      margin-top: 50px;
+    }
+    input, button {
+      font-size: 1.5em;
+      padding: 10px;
+      margin: 10px;
+    }
+    button {
+      background-color: #ff793f;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+    #results-div {
+      margin-top: 20px;
+      font-size: 2em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Telephone Number Validator</h1>
+  <input type="text" id="user-input" placeholder="Enter a Phone Number">
+  <button id="check-btn">Check</button>
+  <button id="clear-btn">Clear</button>
+  <div id="results-div"></div>
+
+  <script>
+    function validateUSPhoneNumber(phoneNumber) {
+      // Updated regex to accept phone numbers with spaces, hyphens, or parentheses.
+      const validUSNumberPattern = /^(1\s?)?(\(\d{3}\)|\d{3})([-\s]?)\d{3}([-\s]?)\d{4}$/;
+      return validUSNumberPattern.test(phoneNumber);
+    }
+
+    document.getElementById("check-btn").addEventListener("click", function() {
+      const input = document.getElementById("user-input").value.trim();
+      const resultsDiv = document.getElementById("results-div");
+
+      if (!input) {
+        alert("Please provide a phone number");
+        return;
+      }
+
+      if (validateUSPhoneNumber(input)) {
+        resultsDiv.textContent = `Valid US number: ${input}`;
+      } else {
+        resultsDiv.textContent = `Invalid US number: ${input}`;
+      }
+    });
+
+    document.getElementById("clear-btn").addEventListener("click", function() {
+      document.getElementById("user-input").value = "";
+      document.getElementById("results-div").textContent = "";
+    });
+  </script>
+
+</body>
+</html>

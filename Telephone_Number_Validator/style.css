@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #2c2c54;
+    color: white;
+    margin-top: 50px;
+  }
+  
+  input, button {
+    font-size: 1.5em;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  button {
+    background-color: #ff793f;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #results-div {
+    margin-top: 20px;
+    font-size: 2em;
+  }
+  
